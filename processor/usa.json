@@ -1,0 +1,28 @@
+[{
+  "name": "read_data",
+  "file_name": "/Users/guoxiaosong/usr/local/maps/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
+  "filter": "iso_a2 = \"US\""
+},{
+  "name": "remove_small_polygons",
+  "minimal_area": 1000000000
+},{
+  "name": "write_data",
+  "format": "jvectormap",
+  "file_name": "us-merc-cn.js",
+  "params": {
+    "code_field": "iso_3166_2",
+    "name_field": "name",
+    "name": "us",
+    "insets": [{
+      "codes": ["US-AK"],
+      "width": 220,
+      "left": 0,
+      "top": 440
+    },{
+      "codes": ["US-HI"],
+      "width": 80,
+      "left": 245,
+      "top": 460
+    }]
+  }
+}]
