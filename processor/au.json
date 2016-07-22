@@ -1,0 +1,58 @@
+[{
+  "name": "read_data",
+  "file_name": "/Users/guoxiaosong/usr/local/maps/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
+  "filter": "iso_a2 = \"AU\""
+},{
+  "name": "join_data",
+  "data": [
+      ["2573", "AU-NSW"],
+      ["6323", "AU-QLD"],
+      ["2555", "AU-SA"],
+      ["2553", "AU-TAS"],
+      ["2554", "AU-VIC"],
+      ["6322", "AU-WA"],
+      ["2572", "AU-ACT"],
+      ["6324", "AU-NT"]
+  ],
+  "fields": [{
+      "name": "OBJECTID_1",
+      "type": 4,
+      "width": 9
+  },{
+      "name": "iso_3166_2",
+      "type": 4,
+      "width": 10
+  }],
+  "on": "OBJECTID_1"
+},{
+  "name": "join_data",
+  "data": [
+	  ["AU-ACT", "澳大利亚首都特区"],
+	  ["AU-NSW", "新南威尔士"],
+	  ["AU-NT", "北领地"],
+	  ["AU-QLD", "昆士兰州"],
+	  ["AU-SA", "南澳大利亚州"],
+	  ["AU-TAS", "塔斯曼尼亚"],
+	  ["AU-VIC", "维多利亚州"],
+	  ["AU-WA", "西澳大利亚州"]
+  ],
+  "fields": [{
+    "name": "iso_3166_2",
+    "type": 4,
+    "width": 6
+  },{
+    "name": "name",
+    "type": 4,
+    "width": 100
+  }],
+  "on": "iso_3166_2"
+},{
+  "name": "write_data",
+  "format": "jvectormap",
+  "file_name": "au-merc-cn.js",
+  "params": {
+    "code_field": "iso_3166_2",
+    "name_field": "name",
+    "name": "au"
+  }
+}]
