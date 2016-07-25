@@ -1,0 +1,84 @@
+[{
+  "name": "read_data",
+  "file_name": "/Users/apple/usr/local/maps/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
+  "filter": "iso_a2 = \"SE\""
+},{
+  "name": "join_data",
+  "data": [
+    ["496", "SE-K"],
+    ["510", "SE-W"],
+    ["508", "SE-X"],
+    ["498", "SE-I"],
+    ["515", "SE-N"],
+    ["517", "SE-Z"],
+    ["509", "SE-F"],
+    ["497", "SE-H"],
+    ["511", "SE-G"],
+    ["507", "SE-BD"],
+    ["512", "SE-T"],
+    ["499", "SE-E"],
+    ["3570", "SE-M"],
+    ["513", "SE-D"],
+    ["501", "SE-AB"],
+    ["503", "SE-C"],
+    ["516", "SE-S"],
+    ["505", "SE-AC"],
+    ["504", "SE-Y"],
+    ["514", "SE-U"],
+    ["3569", "SE-O"]
+  ],
+  "fields": [{
+      "name": "OBJECTID_1",
+      "type": 4,
+      "width": 9
+  },{
+      "name": "iso_3166_2",
+      "type": 4,
+      "width": 10
+  }],
+  "on": "OBJECTID_1"
+},{
+  "name": "join_data",
+  "data": [
+      ["SE-AB", "斯德哥尔摩省"],
+      ["SE-AC", "西博滕"],
+      ["SE-BD", "北博滕省"],
+      ["SE-C", "乌普萨拉省"],
+      ["SE-D", "南曼兰省"],
+      ["SE-E", "东约特兰省"],
+      ["SE-F", "延雪平省"],
+      ["SE-G", "克鲁努贝里省"],
+      ["SE-H", "卡尔马省"],
+      ["SE-I", "哥得兰省"],
+      ["SE-K", "布莱金厄省"],
+      ["SE-M", "斯科讷省"],
+      ["SE-N", "哈兰省"],
+      ["SE-O", "西约塔兰省"],
+      ["SE-S", "韦姆兰省"],
+      ["SE-T", "厄勒布鲁省"],
+      ["SE-U", "西曼兰省"],
+      ["SE-W", "达拉纳省"],
+      ["SE-X", "耶夫勒堡省"],
+      ["SE-Y", "西诺尔兰省"],
+      ["SE-Z", "耶姆特兰省"]
+  ],
+  "fields": [{
+    "name": "iso_3166_2",
+    "type": 4,
+    "width": 6
+  },{
+    "name": "name",
+    "type": 4,
+    "width": 100
+  }],
+  "on": "iso_3166_2"
+},{
+  "name": "write_data",
+  "format": "jvectormap",
+  "file_name": "se-merc-cn.js",
+  "params": {
+    "code_field": "iso_3166_2",
+    "name_field": "name",
+    "name": "se"
+  }
+}]
