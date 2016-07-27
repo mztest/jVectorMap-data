@@ -1,6 +1,6 @@
 [{
   "name": "read_data",
-  "file_name": "/Users/apple/usr/local/maps/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
+  "file_name": "/Users/guoxiaosong/usr/local/maps/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
   "filter": "iso_a2 = \"SE\""
 },{
   "name": "join_data",
