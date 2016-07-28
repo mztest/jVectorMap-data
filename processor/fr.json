@@ -1,61 +1,29 @@
 [{
   "name": "read_data",
-  "file_name": "/Users/guoxiaosong/usr/local/maps/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
+  "file_name": "/Users/apple/usr/local/maps/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
   "filter": "iso_a2 = \"FR\""
 },{
-  "name": "join_data",
-  "data": [
-    ["FR-D", "FR-X1"],
-    ["FR-I", "FR-X1"],
-    ["FR-B", "FR-X2"],
-    ["FR-L", "FR-X2"],
-    ["FR-T", "FR-X2"],
-    ["FR-P", "FR-X3"],
-    ["FR-Q", "FR-X3"],
-    ["FR-A", "FR-X4"],
-    ["FR-G", "FR-X4"],
-    ["FR-M", "FR-X4"],
-    ["FR-K", "FR-X5"],
-    ["FR-N", "FR-X5"],
-    ["FR-O", "FR-X6"],
-    ["FR-S", "FR-X6"],
-    ["FR-C", "FR-X7"],
-    ["FR-V", "FR-X7"],
-    ["FR-E", "FR-E"],
-    ["FR-F", "FR-F"],
-    ["FR-H", "FR-H"],
-    ["FR-J", "FR-J"],
-    ["FR-R", "FR-R"],
-    ["FR-U", "FR-U"],
-    ["FR-GF", "FR-GF"],
-    ["FR-GP", "FR-GP"],
-    ["FR-MQ", "FR-MQ"],
-    ["FR-RE", "FR-RE"],
-    ["FR-YT", "FR-YT"]
-  ],
-  "fields": [{
-      "name": "region_cod",
-      "type": 4,
-      "width": 10
-  },{
-      "name": "iso_new",
-      "type": 4,
-      "width": 5
-  }],
-  "on": "region_cod"
-},{
   "name": "union",
-  "by": "iso_new"
+  "by": "region_cod"
 },{
   "name": "join_data",
   "data": [
-    ["FR-X1", "弗朗什-孔泰大区"],
-    ["FR-X2", "阿基坦-利穆赞-普瓦图-夏朗德大区"],
-    ["FR-X3", "诺曼底大区"],
-    ["FR-X4", "阿尔萨斯-香槟-阿登-洛林大区"],
-    ["FR-X5", "朗格多克-鲁西永-南部-比利牛斯大区"],
-    ["FR-X6", "北部-加来海峡"],
-    ["FR-X7", "奥弗涅-罗纳-阿尔卑斯大区"],
+    ["FR-D", "勃艮第"],
+    ["FR-I", "弗朗什-孔泰大区"],
+    ["FR-B", "阿基坦"],
+    ["FR-L", "利穆赞大区"],
+    ["FR-T", "普瓦图-夏朗德"],
+    ["FR-P", "下诺曼底"],
+    ["FR-Q", "上诺曼底"],
+    ["FR-A", "阿尔萨斯"],
+    ["FR-G", "香槟-阿登"],
+    ["FR-M", "洛林"],
+    ["FR-K", "朗格多克-鲁西永"],
+    ["FR-N", "南部-比利牛斯"],
+    ["FR-O", "北部-加来海峡"],
+    ["FR-S", "皮卡第"],
+    ["FR-C", "奥弗涅大区"],
+    ["FR-V", "罗纳-阿尔卑斯大区"],
     ["FR-E", "布列塔尼半岛"],
     ["FR-F", "中央-卢瓦尔河谷大区"],
     ["FR-H", "科西嘉岛"],
@@ -69,21 +37,21 @@
     ["FR-YT", "马约特岛"]
   ],
   "fields": [{
-    "name": "iso_new",
+    "name": "region_cod",
     "type": 4,
-    "width": 5
+    "width": 6
   },{
     "name": "region",
     "type": 4,
     "width": 100
   }],
-  "on": "iso_new"
+  "on": "region_cod"
 },{
   "name": "write_data",
   "format": "jvectormap",
   "file_name": "fr-merc-cn.js",
   "params": {
-    "code_field": "iso_new",
+    "code_field": "region_cod",
     "name_field": "region",
     "name": "fr",
     "insets": [{
