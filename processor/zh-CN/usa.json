@@ -79,7 +79,7 @@
 },{
   "name": "write_data",
   "format": "jvectormap",
-  "file_name": "us-merc-cn.js",
+  "file_name": "data/zh-CN/us-merc.js",
   "params": {
     "code_field": "iso_3166_2",
     "name_field": "name",

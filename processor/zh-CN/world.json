@@ -301,7 +301,7 @@
   {
     "name": "write_data",
     "format": "jvectormap",
-    "file_name": "world-merc-cn.js",
+    "file_name": "data/zh-CN/world-merc.js",
     "params": {
       "code_field": "iso_a2",
       "name_field": "name",

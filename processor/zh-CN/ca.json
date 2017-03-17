@@ -5,19 +5,19 @@
 },{
   "name": "join_data",
   "data": [
-	  ["CA-AB", "艾伯塔省"],
-	  ["CA-BC", "不列颠哥伦比亚省"],
-	  ["CA-MB", "马尼托巴"],
-	  ["CA-NB", "新布蓝兹维省"],
-	  ["CA-NL", "纽芬兰-拉布拉多"],
-	  ["CA-NS", "新斯科舍"],
-	  ["CA-NT", "加拿大西北地区"],
-	  ["CA-NU", "努纳武特"],
-	  ["CA-ON", "安大略"],
-	  ["CA-PE", "爱德华王子岛"],
-	  ["CA-QC", "魁北克"],
-	  ["CA-SK", "萨斯喀彻温"],
-	  ["CA-YT", "育空"]
+    ["CA-AB", "艾伯塔省"],
+    ["CA-BC", "不列颠哥伦比亚省"],
+    ["CA-MB", "马尼托巴"],
+    ["CA-NB", "新布蓝兹维省"],
+    ["CA-NL", "纽芬兰-拉布拉多"],
+    ["CA-NS", "新斯科舍"],
+    ["CA-NT", "加拿大西北地区"],
+    ["CA-NU", "努纳武特"],
+    ["CA-ON", "安大略"],
+    ["CA-PE", "爱德华王子岛"],
+    ["CA-QC", "魁北克"],
+    ["CA-SK", "萨斯喀彻温"],
+    ["CA-YT", "育空"]
   ],
   "fields": [{
     "name": "iso_3166_2",
@@ -32,7 +32,7 @@
 },{
   "name": "write_data",
   "format": "jvectormap",
-  "file_name": "ca-merc-cn.js",
+  "file_name": "data/zh-CN/ca-merc.js",
   "params": {
     "code_field": "iso_3166_2",
     "name_field": "name",

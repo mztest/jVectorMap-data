@@ -49,7 +49,7 @@
 },{
   "name": "write_data",
   "format": "jvectormap",
-  "file_name": "fr-merc-cn.js",
+  "file_name": "data/zh-CN/fr-merc.js",
   "params": {
     "code_field": "region_cod",
     "name_field": "region",
